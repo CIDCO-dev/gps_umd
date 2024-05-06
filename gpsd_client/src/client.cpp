@@ -178,7 +178,7 @@ class GPSDClient {
 #endif
         fix.latitude = p->fix.latitude;
         fix.longitude = p->fix.longitude;
-        fix.altitude = p->fix.altitude;
+        fix.altitude = p->fix.altHAE;
         fix.track = p->fix.track;
         fix.speed = p->fix.speed;
         fix.climb = p->fix.climb;
@@ -269,7 +269,7 @@ class GPSDClient {
 
       fix->latitude = p->fix.latitude;
       fix->longitude = p->fix.longitude;
-      fix->altitude = p->fix.altitude;
+      fix->altitude = p->fix.altHAE;
 
       /* gpsd reports status=OK even when there is no current fix,
        * as long as there has been a fix previously. Throw out these
